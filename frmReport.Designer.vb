@@ -37,6 +37,13 @@ Partial Class frmReport
         Me.TicketDataSet = New Ticket_Management_System.TicketDataSet()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbl_totalPrice = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_filter = New System.Windows.Forms.Button()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txt_search = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,21 +52,16 @@ Partial Class frmReport
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txt_search = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.btn_filter = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lbl_totalPrice = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TicketDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TicketDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -192,17 +194,83 @@ Partial Class frmReport
         Me.Panel2.Size = New System.Drawing.Size(994, 63)
         Me.Panel2.TabIndex = 3
         '
+        'lbl_totalPrice
+        '
+        Me.lbl_totalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_totalPrice.Location = New System.Drawing.Point(922, 16)
+        Me.lbl_totalPrice.Name = "lbl_totalPrice"
+        Me.lbl_totalPrice.Size = New System.Drawing.Size(69, 23)
+        Me.lbl_totalPrice.TabIndex = 6
+        Me.lbl_totalPrice.Text = "0.00"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(569, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(23, 15)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "TO"
+        '
+        'btn_filter
+        '
+        Me.btn_filter.BackColor = System.Drawing.Color.Coral
+        Me.btn_filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_filter.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_filter.Location = New System.Drawing.Point(817, 9)
+        Me.btn_filter.Name = "btn_filter"
+        Me.btn_filter.Size = New System.Drawing.Size(90, 40)
+        Me.btn_filter.TabIndex = 4
+        Me.btn_filter.Text = "FILTER"
+        Me.btn_filter.UseVisualStyleBackColor = False
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(598, 9)
+        Me.DateTimePicker2.MinimumSize = New System.Drawing.Size(4, 40)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 40)
+        Me.DateTimePicker2.TabIndex = 3
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(363, 8)
+        Me.DateTimePicker1.MinimumSize = New System.Drawing.Size(10, 40)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 40)
+        Me.DateTimePicker1.TabIndex = 2
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Ticket_Management_System.My.Resources.Resources.images
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 40)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'txt_search
+        '
+        Me.txt_search.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txt_search.Location = New System.Drawing.Point(69, 9)
+        Me.txt_search.MinimumSize = New System.Drawing.Size(200, 50)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.Size = New System.Drawing.Size(273, 20)
+        Me.txt_search.TabIndex = 0
+        '
         'DataGridView2
         '
-        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DataGridView2.ColumnHeadersHeight = 29
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
-        Me.DataGridView2.DataSource = Me.TicketDataSetBindingSource
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.Location = New System.Drawing.Point(0, 132)
         Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.Size = New System.Drawing.Size(994, 509)
@@ -239,7 +307,7 @@ Partial Class frmReport
         Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Visible = False
-        Me.DataGridViewTextBoxColumn4.Width = 81
+        Me.DataGridViewTextBoxColumn4.Width = 125
         '
         'DataGridViewTextBoxColumn5
         '
@@ -248,7 +316,7 @@ Partial Class frmReport
         Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.Visible = False
-        Me.DataGridViewTextBoxColumn5.Width = 81
+        Me.DataGridViewTextBoxColumn5.Width = 125
         '
         'DataGridViewTextBoxColumn6
         '
@@ -265,73 +333,13 @@ Partial Class frmReport
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 72
         '
-        'txt_search
-        '
-        Me.txt_search.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.txt_search.Location = New System.Drawing.Point(69, 9)
-        Me.txt_search.MinimumSize = New System.Drawing.Size(200, 50)
-        Me.txt_search.Name = "txt_search"
-        Me.txt_search.Size = New System.Drawing.Size(273, 50)
-        Me.txt_search.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Ticket_Management_System.My.Resources.Resources.images
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(51, 40)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(363, 8)
-        Me.DateTimePicker1.MinimumSize = New System.Drawing.Size(10, 40)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 40)
-        Me.DateTimePicker1.TabIndex = 2
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(598, 9)
-        Me.DateTimePicker2.MinimumSize = New System.Drawing.Size(0, 40)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 40)
-        Me.DateTimePicker2.TabIndex = 3
-        '
-        'btn_filter
-        '
-        Me.btn_filter.BackColor = System.Drawing.Color.Coral
-        Me.btn_filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_filter.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_filter.Location = New System.Drawing.Point(817, 9)
-        Me.btn_filter.Name = "btn_filter"
-        Me.btn_filter.Size = New System.Drawing.Size(90, 40)
-        Me.btn_filter.TabIndex = 4
-        Me.btn_filter.Text = "FILTER"
-        Me.btn_filter.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(569, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(23, 15)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "TO"
-        '
-        'lbl_totalPrice
-        '
-        Me.lbl_totalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_totalPrice.Location = New System.Drawing.Point(922, 16)
-        Me.lbl_totalPrice.Name = "lbl_totalPrice"
-        Me.lbl_totalPrice.Size = New System.Drawing.Size(69, 23)
-        Me.lbl_totalPrice.TabIndex = 6
-        Me.lbl_totalPrice.Text = "0.00"
-        '
         'Timer1
         '
+        '
+        'DataTable1BindingSource
+        '
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.TicketDataSetBindingSource
         '
         'frmReport
         '
@@ -351,8 +359,9 @@ Partial Class frmReport
         CType(Me.TicketDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -387,4 +396,5 @@ Partial Class frmReport
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents lbl_totalPrice As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents DataTable1BindingSource As BindingSource
 End Class
