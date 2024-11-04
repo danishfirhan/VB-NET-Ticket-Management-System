@@ -12,15 +12,19 @@ Module dbconnection
 
     Public Function dbconn() As Boolean
         Try
+            If conn Is Nothing Then
+                conn = New MySqlConnection()
+            End If
             If conn.State = ConnectionState.Closed Then
-                conn.ConnectionString = "server=localhost; user=admin; password=admin;port=3306;database=ticket_db"
+                conn.ConnectionString = "server=localhost; user=admin; password=admin; port=3306; database=ticket_db"
                 result = True
             End If
         Catch ex As Exception
             result = False
-            MsgBox("Server not connected!", vbExclamation)
+            MsgBox("Server not connected!" & vbCrLf & ex.Message, vbExclamation)
         End Try
         Return result
     End Function
+
 
 End Module
