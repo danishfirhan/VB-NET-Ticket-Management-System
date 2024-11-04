@@ -93,7 +93,7 @@ Partial Class frmLogin
         Me.usernameTextBox.Location = New System.Drawing.Point(384, 122)
         Me.usernameTextBox.MinimumSize = New System.Drawing.Size(4, 40)
         Me.usernameTextBox.Name = "usernameTextBox"
-        Me.usernameTextBox.Size = New System.Drawing.Size(444, 27)
+        Me.usernameTextBox.Size = New System.Drawing.Size(403, 40)
         Me.usernameTextBox.TabIndex = 5
         '
         'Label4
@@ -110,17 +110,17 @@ Partial Class frmLogin
         'passwordTextBox
         '
         Me.passwordTextBox.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passwordTextBox.Location = New System.Drawing.Point(384, 249)
+        Me.passwordTextBox.Location = New System.Drawing.Point(384, 250)
         Me.passwordTextBox.MinimumSize = New System.Drawing.Size(4, 40)
         Me.passwordTextBox.Name = "passwordTextBox"
-        Me.passwordTextBox.Size = New System.Drawing.Size(444, 27)
+        Me.passwordTextBox.Size = New System.Drawing.Size(403, 40)
         Me.passwordTextBox.TabIndex = 7
         '
         'loginBtn
         '
         Me.loginBtn.BackColor = System.Drawing.Color.Yellow
         Me.loginBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loginBtn.Location = New System.Drawing.Point(389, 322)
+        Me.loginBtn.Location = New System.Drawing.Point(384, 323)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.Size = New System.Drawing.Size(174, 42)
         Me.loginBtn.TabIndex = 8

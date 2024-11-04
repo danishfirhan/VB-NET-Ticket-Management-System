@@ -2,7 +2,7 @@
 
 Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dbconn()
+        dbconn() ' Ensure your database connection function is correctly implemented
     End Sub
 
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
@@ -21,14 +21,14 @@ Public Class frmLogin
                 Form1.Show() ' Show the main form after a successful login
             Else
                 MsgBox("Login Failed! Please enter the correct credentials.", vbCritical)
+                ' Clear the text boxes only if login fails
+                usernameTextBox.Clear()
+                passwordTextBox.Clear()
             End If
         Catch ex As Exception
             MsgBox("An error occurred: " & ex.Message)
         Finally
             conn.Close() ' Ensure the connection is closed properly
         End Try
-        usernameTextBox.Clear()
-        passwordTextBox.Clear()
-        Form1.Show()
     End Sub
 End Class
