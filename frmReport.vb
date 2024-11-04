@@ -87,4 +87,5 @@ Public Class frmReport
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Total()
     End Sub
+
 End Class
