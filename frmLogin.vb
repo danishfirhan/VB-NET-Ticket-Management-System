@@ -18,17 +18,16 @@ Public Class frmLogin
             If dr.HasRows Then
                 MsgBox("Login Successful!", vbInformation)
                 Me.Hide() ' Hide the login form
-                Form1.Show() ' Show the main form after a successful login
+                frmSplashScreen.Show() ' Show the splash screen form after a successful login
             Else
                 MsgBox("Login Failed! Please enter the correct credentials.", vbCritical)
-                ' Clear the text boxes only if login fails
                 usernameTextBox.Clear()
                 passwordTextBox.Clear()
             End If
         Catch ex As Exception
             MsgBox("An error occurred: " & ex.Message)
         Finally
-            conn.Close() ' Ensure the connection is closed properly
+            conn.Close()
         End Try
     End Sub
 End Class

@@ -30,10 +30,6 @@ Partial Class frm_ManageMovie
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.txt_MovieName = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -113,7 +109,7 @@ Partial Class frm_ManageMovie
         Me.btn_save.BackColor = System.Drawing.Color.Yellow
         Me.btn_save.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.btn_save.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btn_save.Location = New System.Drawing.Point(517, 154)
+        Me.btn_save.Location = New System.Drawing.Point(361, 259)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(120, 40)
         Me.btn_save.TabIndex = 9
@@ -130,62 +126,12 @@ Partial Class frm_ManageMovie
         Me.txt_MovieName.Size = New System.Drawing.Size(379, 31)
         Me.txt_MovieName.TabIndex = 10
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(106, 255)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 25)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Movie Hall"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(103, 282)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.MinimumSize = New System.Drawing.Size(4, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(379, 40)
-        Me.TextBox1.TabIndex = 12
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(103, 379)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.MinimumSize = New System.Drawing.Size(4, 40)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(379, 40)
-        Me.TextBox2.TabIndex = 13
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(99, 346)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(138, 25)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Movie Cinema"
-        '
         'frm_ManageMovie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(602, 543)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label4)
+        Me.ClientSize = New System.Drawing.Size(600, 366)
         Me.Controls.Add(Me.txt_MovieName)
         Me.Controls.Add(Me.btn_save)
         Me.Controls.Add(Me.Label2)
@@ -210,8 +156,4 @@ Partial Class frm_ManageMovie
     Friend WithEvents Label2 As Label
     Friend WithEvents btn_save As Button
     Friend WithEvents txt_MovieName As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label5 As Label
 End Class

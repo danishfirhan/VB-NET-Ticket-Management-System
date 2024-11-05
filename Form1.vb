@@ -131,4 +131,8 @@ Public Class Form1
     Private Sub reportBtn_Click(sender As Object, e As EventArgs) Handles reportBtn.Click
         frmReport.ShowDialog()
     End Sub
+
+    Private Sub aboutBtn_Click(sender As Object, e As EventArgs) Handles aboutBtn.Click
+        frmAbout.ShowDialog()
+    End Sub
 End Class
