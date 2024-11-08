@@ -16,7 +16,6 @@ Public Class frmLogin
             dr = cmd.ExecuteReader
 
             If dr.HasRows Then
-                MsgBox("Login Successful!", vbInformation)
                 Me.Hide() ' Hide the login form
                 frmSplashScreen.Show() ' Show the splash screen form after a successful login
             Else

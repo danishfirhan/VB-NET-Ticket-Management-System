@@ -134,5 +134,11 @@ Public Class Form1
 
     Private Sub aboutBtn_Click(sender As Object, e As EventArgs) Handles aboutBtn.Click
         frmAbout.ShowDialog()
+    End Sub MySub()
+
+End Sub
+
+    Private Sub manageCustomerBtn_Click(sender As Object, e As EventArgs) Handles manageCustomerBtn.Click
+        frmManageCustomer.ShowDialog()
     End Sub
 End Class

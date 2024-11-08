@@ -132,6 +132,12 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmManageCustomer.Designer.vb">
+      <DependentUpon>frmManageCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrint.Designer.vb">
       <DependentUpon>frmPrint.vb</DependentUpon>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageCustomer.resx">
+      <DependentUpon>frmManageCustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrint.resx">
       <DependentUpon>frmPrint.vb</DependentUpon>
@@ -275,6 +284,7 @@
     <None Include="Resources\gsc logo.png" />
     <None Include="Resources\images.png" />
     <None Include="Resources\pngtree-vector-search-icon-png-image_320926.jpg" />
+    <None Include="Resources\52a6630e8225fea3ab2f8dde8f874ed7.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

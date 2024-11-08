@@ -32,6 +32,8 @@ Partial Class Form1
         Me.lbl_movieName = New System.Windows.Forms.Label()
         Me.lbl_moviePrice = New System.Windows.Forms.Label()
         Me.aboutBtn = New System.Windows.Forms.Button()
+        Me.manageCustomerBtn = New System.Windows.Forms.Button()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.pic_barcode = New System.Windows.Forms.PictureBox()
         Me.pic_qrcode = New System.Windows.Forms.PictureBox()
@@ -41,6 +43,7 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_barcode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_qrcode, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +60,7 @@ Partial Class Form1
         Me.reportBtn.BackColor = System.Drawing.Color.Yellow
         Me.reportBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.reportBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.reportBtn.Location = New System.Drawing.Point(438, 555)
+        Me.reportBtn.Location = New System.Drawing.Point(663, 557)
         Me.reportBtn.Name = "reportBtn"
         Me.reportBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
         Me.reportBtn.Size = New System.Drawing.Size(185, 81)
@@ -70,7 +73,7 @@ Partial Class Form1
         Me.manageMovieBtn.BackColor = System.Drawing.Color.Yellow
         Me.manageMovieBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.manageMovieBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.manageMovieBtn.Location = New System.Drawing.Point(218, 552)
+        Me.manageMovieBtn.Location = New System.Drawing.Point(225, 558)
         Me.manageMovieBtn.Name = "manageMovieBtn"
         Me.manageMovieBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
         Me.manageMovieBtn.Size = New System.Drawing.Size(200, 81)
@@ -83,7 +86,7 @@ Partial Class Form1
         Me.newBtn.BackColor = System.Drawing.Color.Yellow
         Me.newBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.newBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.newBtn.Location = New System.Drawing.Point(31, 549)
+        Me.newBtn.Location = New System.Drawing.Point(31, 558)
         Me.newBtn.Name = "newBtn"
         Me.newBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
         Me.newBtn.Size = New System.Drawing.Size(171, 84)
@@ -96,7 +99,7 @@ Partial Class Form1
         Me.exitBtn.BackColor = System.Drawing.Color.Yellow
         Me.exitBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.exitBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.exitBtn.Location = New System.Drawing.Point(865, 555)
+        Me.exitBtn.Location = New System.Drawing.Point(1070, 558)
         Me.exitBtn.Name = "exitBtn"
         Me.exitBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
         Me.exitBtn.Size = New System.Drawing.Size(166, 78)
@@ -118,7 +121,7 @@ Partial Class Form1
         Me.lbl_ticketNo.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lbl_ticketNo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_ticketNo.ForeColor = System.Drawing.Color.Yellow
-        Me.lbl_ticketNo.Location = New System.Drawing.Point(394, 110)
+        Me.lbl_ticketNo.Location = New System.Drawing.Point(501, 110)
         Me.lbl_ticketNo.Name = "lbl_ticketNo"
         Me.lbl_ticketNo.Size = New System.Drawing.Size(284, 44)
         Me.lbl_ticketNo.TabIndex = 14
@@ -130,7 +133,7 @@ Partial Class Form1
         Me.lbl_movieName.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lbl_movieName.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_movieName.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lbl_movieName.Location = New System.Drawing.Point(438, 338)
+        Me.lbl_movieName.Location = New System.Drawing.Point(551, 338)
         Me.lbl_movieName.Name = "lbl_movieName"
         Me.lbl_movieName.Size = New System.Drawing.Size(284, 44)
         Me.lbl_movieName.TabIndex = 15
@@ -141,7 +144,7 @@ Partial Class Form1
         Me.lbl_moviePrice.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lbl_moviePrice.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_moviePrice.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lbl_moviePrice.Location = New System.Drawing.Point(447, 382)
+        Me.lbl_moviePrice.Location = New System.Drawing.Point(551, 382)
         Me.lbl_moviePrice.Name = "lbl_moviePrice"
         Me.lbl_moviePrice.Size = New System.Drawing.Size(284, 35)
         Me.lbl_moviePrice.TabIndex = 16
@@ -152,7 +155,7 @@ Partial Class Form1
         Me.aboutBtn.BackColor = System.Drawing.Color.Yellow
         Me.aboutBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
         Me.aboutBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.aboutBtn.Location = New System.Drawing.Point(652, 556)
+        Me.aboutBtn.Location = New System.Drawing.Point(860, 558)
         Me.aboutBtn.Name = "aboutBtn"
         Me.aboutBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
         Me.aboutBtn.Size = New System.Drawing.Size(197, 78)
@@ -160,11 +163,35 @@ Partial Class Form1
         Me.aboutBtn.Text = "ABOUT"
         Me.aboutBtn.UseVisualStyleBackColor = False
         '
+        'manageCustomerBtn
+        '
+        Me.manageCustomerBtn.BackColor = System.Drawing.Color.Yellow
+        Me.manageCustomerBtn.Font = New System.Drawing.Font("Segoe UI", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.manageCustomerBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.manageCustomerBtn.Location = New System.Drawing.Point(431, 557)
+        Me.manageCustomerBtn.Name = "manageCustomerBtn"
+        Me.manageCustomerBtn.Padding = New System.Windows.Forms.Padding(60, 0, 0, 0)
+        Me.manageCustomerBtn.Size = New System.Drawing.Size(226, 81)
+        Me.manageCustomerBtn.TabIndex = 20
+        Me.manageCustomerBtn.Text = "MANAGE CUSTOMER"
+        Me.manageCustomerBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Yellow
+        Me.PictureBox8.Image = Global.Ticket_Management_System.My.Resources.Resources._52a6630e8225fea3ab2f8dde8f874ed7
+        Me.PictureBox8.Location = New System.Drawing.Point(443, 564)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(52, 57)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 21
+        Me.PictureBox8.TabStop = False
+        '
         'PictureBox7
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox7.Image = Global.Ticket_Management_System.My.Resources.Resources._1200px_Minimalist_info_Icon
-        Me.PictureBox7.Location = New System.Drawing.Point(662, 567)
+        Me.PictureBox7.Location = New System.Drawing.Point(875, 569)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(57, 52)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -173,7 +200,7 @@ Partial Class Form1
         '
         'pic_barcode
         '
-        Me.pic_barcode.Location = New System.Drawing.Point(416, 420)
+        Me.pic_barcode.Location = New System.Drawing.Point(483, 420)
         Me.pic_barcode.Name = "pic_barcode"
         Me.pic_barcode.Size = New System.Drawing.Size(315, 58)
         Me.pic_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -182,7 +209,7 @@ Partial Class Form1
         '
         'pic_qrcode
         '
-        Me.pic_qrcode.Location = New System.Drawing.Point(454, 141)
+        Me.pic_qrcode.Location = New System.Drawing.Point(558, 143)
         Me.pic_qrcode.Name = "pic_qrcode"
         Me.pic_qrcode.Size = New System.Drawing.Size(265, 202)
         Me.pic_qrcode.TabIndex = 11
@@ -192,7 +219,7 @@ Partial Class Form1
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox6.Image = Global.Ticket_Management_System.My.Resources.Resources.add_icon
-        Me.PictureBox6.Location = New System.Drawing.Point(46, 569)
+        Me.PictureBox6.Location = New System.Drawing.Point(44, 569)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(61, 57)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -203,7 +230,7 @@ Partial Class Form1
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox5.Image = Global.Ticket_Management_System.My.Resources.Resources.exit_icon
-        Me.PictureBox5.Location = New System.Drawing.Point(878, 567)
+        Me.PictureBox5.Location = New System.Drawing.Point(1084, 569)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(57, 52)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -214,7 +241,7 @@ Partial Class Form1
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox4.Image = Global.Ticket_Management_System.My.Resources.Resources.report_icon
-        Me.PictureBox4.Location = New System.Drawing.Point(445, 569)
+        Me.PictureBox4.Location = New System.Drawing.Point(673, 569)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(56, 52)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -225,7 +252,7 @@ Partial Class Form1
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox3.Image = Global.Ticket_Management_System.My.Resources.Resources.film_icon
-        Me.PictureBox3.Location = New System.Drawing.Point(235, 562)
+        Me.PictureBox3.Location = New System.Drawing.Point(235, 569)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(52, 57)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -236,7 +263,7 @@ Partial Class Form1
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.PictureBox2.Image = Global.Ticket_Management_System.My.Resources.Resources.GSC_Promotion_Page_velvet_premiere_ticket
-        Me.PictureBox2.Location = New System.Drawing.Point(483, 484)
+        Me.PictureBox2.Location = New System.Drawing.Point(538, 487)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(157, 64)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -246,7 +273,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(376, -3)
+        Me.PictureBox1.Location = New System.Drawing.Point(496, -3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(302, 110)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -258,7 +285,9 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(1059, 644)
+        Me.ClientSize = New System.Drawing.Size(1311, 680)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.manageCustomerBtn)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.aboutBtn)
         Me.Controls.Add(Me.pic_barcode)
@@ -279,6 +308,7 @@ Partial Class Form1
         Me.Controls.Add(Me.newBtn)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_barcode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_qrcode, System.ComponentModel.ISupportInitialize).EndInit()
@@ -310,4 +340,6 @@ Partial Class Form1
     Friend WithEvents pic_barcode As PictureBox
     Friend WithEvents aboutBtn As Button
     Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents manageCustomerBtn As Button
+    Friend WithEvents PictureBox8 As PictureBox
 End Class
